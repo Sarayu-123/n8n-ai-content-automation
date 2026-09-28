@@ -1,3 +1,4 @@
+
 # 🤖 AI Content Generator & Auto Publisher
 
 ### ⚡ From topic → AI-generated article → WordPress → social-ready content
@@ -24,55 +25,73 @@ The workflow dynamically selects a topic, generates a complete blog using a **lo
 🌐 WordPress Publishing
         ↓
 📱 Social Post Generation
+````
 
-🚀 Features
-🕐 Scheduled Automation — Automatically triggers the workflow
-🎯 Dynamic Topics — Selects topics programmatically
-🧠 Local AI Generation — Uses Ollama with Llama 3
-✍️ Content Processing — Extracts and structures generated content
-⚙️ JavaScript Formatting — Converts AI output into publish-ready HTML
-🌐 Auto Publishing — Creates and publishes WordPress posts
-📱 Social Content — Generates social-media-ready summaries
-🔒 Local AI — Content generation runs locally
-🧩 Tech Stack
-Technology	Purpose
-n8n	Workflow automation
-Ollama	Local LLM runtime
-Llama 3	AI content generation
-WordPress	Blog publishing
-JavaScript	Content processing and formatting
-REST APIs	Service communication
-XAMPP	Local WordPress environment
-🔄 Workflow Breakdown
-1. 🕐 Schedule Trigger
+---
+
+## 🚀 Features
+
+* 🕐 **Scheduled Automation** — Automatically triggers the workflow
+* 🎯 **Dynamic Topics** — Selects topics programmatically
+* 🧠 **Local AI Generation** — Uses Ollama with Llama 3
+* ✍️ **Content Processing** — Extracts and structures generated content
+* ⚙️ **JavaScript Formatting** — Converts AI output into publish-ready HTML
+* 🌐 **Auto Publishing** — Creates and publishes WordPress posts
+* 📱 **Social Content** — Generates social-media-ready summaries
+* 🔒 **Local AI** — Content generation runs locally
+
+---
+
+## 🧩 Tech Stack
+
+| Technology     | Purpose                           |
+| -------------- | --------------------------------- |
+| **n8n**        | Workflow automation               |
+| **Ollama**     | Local LLM runtime                 |
+| **Llama 3**    | AI content generation             |
+| **WordPress**  | Blog publishing                   |
+| **JavaScript** | Content processing and formatting |
+| **REST APIs**  | Service communication             |
+| **XAMPP**      | Local WordPress environment       |
+
+---
+
+## 🔄 Workflow Breakdown
+
+### 1. 🕐 Schedule Trigger
 
 Starts the automation according to the configured schedule.
 
-2. 🎯 Dynamic Topic Generation
+### 2. 🎯 Dynamic Topic Generation
 
 A JavaScript expression selects a topic from the predefined topic set.
 
-3. 🧠 AI Content Generation
+### 3. 🧠 AI Content Generation
 
-n8n sends the selected topic to Ollama running Llama 3, which generates a structured blog article containing:
+n8n sends the selected topic to **Ollama running Llama 3**, which generates a structured blog article containing:
 
-Title
-Introduction
-Multiple sections
-Conclusion
-4. ⚙️ Content Formatting
+* Title
+* Introduction
+* Multiple sections
+* Conclusion
+
+### 4. ⚙️ Content Formatting
 
 JavaScript processes the generated response and converts the Markdown-style structure into HTML suitable for WordPress.
 
-5. 🌐 WordPress Publishing
+### 5. 🌐 WordPress Publishing
 
 The formatted article is sent through the WordPress integration and published automatically.
 
-6. 📱 Social Post Generation
+### 6. 📱 Social Post Generation
 
 A final JavaScript node creates a short social-media-ready version of the generated article.
 
-🏗️ Architecture
+---
+
+## 🏗️ Architecture
+
+```text
               ┌───────────────────┐
               │  🕐 Schedule      │
               │     Trigger       │
@@ -102,59 +121,88 @@ A final JavaScript node creates a short social-media-ready version of the genera
               │  📱 Social Post   │
               │     Generator     │
               └───────────────────┘
-💡 Key Highlights
-🔗 End-to-end workflow automation
-🧠 Local LLM integration using Ollama
-🔌 HTTP / REST API integration
-⚙️ JavaScript-based data transformation
-🌐 Automated WordPress publishing
-🔄 Dynamic and repeatable content pipeline
-🔒 No external AI API required for content generation
-📁 Project Structure
+```
+
+---
+
+## 💡 Key Highlights
+
+* 🔗 End-to-end workflow automation
+* 🧠 Local LLM integration using Ollama
+* 🔌 HTTP / REST API integration
+* ⚙️ JavaScript-based data transformation
+* 🌐 Automated WordPress publishing
+* 🔄 Dynamic and repeatable content pipeline
+* 🔒 No external AI API required for content generation
+
+---
+
+## 📁 Project Structure
+
+```text
 n8n-ai-content-automation/
 │
 ├── myworkflow.json    # Exported n8n workflow
 ├── README.md          # Project documentation
 └── .gitignore         # Git ignore rules
-🛠️ Run Locally
-Prerequisites
-Node.js
-n8n
-Ollama
-Llama 3
-WordPress
-XAMPP
-Start n8n
+```
+
+---
+
+## 🛠️ Run Locally
+
+### Prerequisites
+
+* Node.js
+* n8n
+* Ollama
+* Llama 3
+* WordPress
+* XAMPP
+
+### Start n8n
+
+```bash
 npx n8n
+```
 
 Then open:
 
+```text
 http://localhost:5678
+```
 
-Import myworkflow.json, configure the required WordPress credential, and run the workflow.
+Import `myworkflow.json`, configure the required WordPress credential, and run the workflow.
 
-🔐 Local & Security Notes
+---
 
-This repository contains the workflow definition and documentation only.
+## 🔐 Local & Security Notes
+
+This repository contains the **workflow definition and documentation only**.
 
 The following remain local and are not committed:
 
-n8n local database
-n8n credentials
-WordPress installation and database
-Ollama model files
-Environment variables
-Passwords and API credentials
-🎯 Project Goal
+* n8n local database
+* n8n credentials
+* WordPress installation and database
+* Ollama model files
+* Environment variables
+* Passwords and API credentials
 
-Build a reusable AI-powered content automation pipeline that reduces manual effort across:
+---
 
-Topic Selection → Content Creation → Formatting → Publishing → Social Content
+## 🎯 Project Goal
 
-👩‍💻 Author
+Build a reusable **AI-powered content automation pipeline** that reduces manual effort across:
 
-N. Ch. Sarayu
+**Topic Selection → Content Creation → Formatting → Publishing → Social Content**
 
-Computer Science Engineering | AI & ML
+---
 
-GitHub
+## 👩‍💻 Author
+
+**N. Ch. Sarayu**
+
+[GitHub](https://github.com/Sarayu-123)
+
+
